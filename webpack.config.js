@@ -1,6 +1,7 @@
 // webpack.config.js
 
 module.exports = {
+    mode: 'production',
     module: {
       rules: [
         {

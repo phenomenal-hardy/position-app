@@ -4,10 +4,10 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
-    "preview": "vite preview --port $PORT",
+    "preview": "vite preview --port 4173",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
-    "heroku-postpreview": "vite build & vite preview --port $PORT"
+    "heroku-postbuild": "vite build && vite preview --port $PORT"
   },
   "dependencies": {
     "@amcharts/amcharts5": "^5.2.45",
