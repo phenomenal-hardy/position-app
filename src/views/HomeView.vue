@@ -142,17 +142,23 @@ async function saveUserInput() {
 
       if ('errors' in error.response.data) {
 
-        let errorObj = error.response.data.errors;
+        let errorObj: {
+          
+        } = error.response.data.errors;
 
         for (const [key, value] of Object.entries(errorObj)) {
+
+
+          let arrMessage: string[] = value as string[];
+
           console.log(`${key}: ${value}`);
 
           // value es un array de mensajes
-          for(let k = 0; k < value.length; k++) {
+          for(let k = 0; k < arrMessage.length; k++) {
 
               errors.value.push({
               field: key,
-              message: value[k]
+              message: arrMessage[k]
             });
           }
           

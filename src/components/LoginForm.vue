@@ -1,4 +1,5 @@
 <script lang="ts">
+import { defineComponent } from 'vue';
 import type { ValidationError } from '@/interfaces/validation-error';
 import { useSessionStore } from '@/stores/session';
 
@@ -11,7 +12,7 @@ interface UserAccount {
     email: string
 }
 
-export default {
+export default defineComponent({
     name: 'LoginForm',
     mounted: function () {
 
@@ -128,7 +129,7 @@ export default {
         }
 
     }
-}
+})
 </script>
 <template>
     <div>
